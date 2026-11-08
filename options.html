@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sidedoor settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="options">
+  <header>
+    <img src="icons/icon.svg" alt="" width="40" height="40">
+    <div>
+      <h1>Sidedoor for X Links</h1>
+      <p class="muted">Opens x.com and twitter.com links in a viewer of your choice.</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>General</h2>
+    <label class="row"><input type="checkbox" id="enabled"> Turned on</label>
+    <label class="row"><input type="checkbox" id="rewrite"> Rewrite X links on web pages</label>
+    <label class="row"><input type="checkbox" id="redirect"> Redirect when I open an x.com page directly</label>
+  </section>
+
+  <section>
+    <h2>Viewer</h2>
+    <p class="muted">Pick where X links should open. If one stops working, switch to another or add your own.</p>
+    <div id="viewers"></div>
+  </section>
+
+  <section>
+    <h2>Add a viewer</h2>
+    <label class="field"><span>Name</span><input type="text" id="new-name" placeholder="My viewer"></label>
+    <label class="field"><span>URL pattern</span><input type="text" id="new-template" class="mono" placeholder="https://example.com/{path}{query}"></label>
+    <p class="muted small">
+      <code>{path}</code> is everything after x.com/ (for example <code>NASA/status/123</code>),
+      <code>{query}</code> is the query string, and <code>{url}</code> is the full x.com link, encoded,
+      for sites that take <code>?url=…</code>.
+    </p>
+    <p class="small" id="new-preview"></p>
+    <p class="error small" id="new-error"></p>
+    <button id="add">Add viewer</button>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <p class="muted small">
+      Sidedoor doesn't collect, store or send any data. Everything happens in your browser.
+      When you open a link, you're visiting the viewer site you chose, and that site's own privacy policy applies.
+      Sidedoor isn't affiliated with X Corp. or any viewer site.
+    </p>
+  </section>
+
+  <p id="status" class="status"></p>
+
+  <script src="common.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

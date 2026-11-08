@@ -1,0 +1,48 @@
+:root {
+  --fg: #1f2328; --muted: #6b7280; --bg: #ffffff; --line: #e5e7eb;
+  --accent: #0f766e; --error: #b42318;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fg: #e6e6e6; --muted: #9ca3af; --bg: #1c1b22; --line: #3a3944; --accent: #2dd4bf; --error: #f97066; }
+}
+* { box-sizing: border-box; }
+body { font: 14px/1.45 system-ui, sans-serif; color: var(--fg); background: var(--bg); margin: 0; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+.mono, code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; }
+.error { color: var(--error); min-height: 1em; }
+input[type=text], select {
+  width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px;
+  background: transparent; color: inherit; font: inherit;
+}
+button {
+  font: inherit; padding: 6px 14px; border-radius: 6px; border: 1px solid var(--accent);
+  background: var(--accent); color: #fff; cursor: pointer;
+}
+button.link { background: none; border: none; color: var(--muted); padding: 0; margin-left: auto; }
+button.link:hover { color: var(--error); }
+input[type=checkbox], input[type=radio] { accent-color: var(--accent); }
+.row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.field { display: block; margin: 10px 0; }
+.field > span { display: block; margin-bottom: 4px; }
+
+/* Popup */
+.popup { width: 280px; padding: 12px 14px; }
+.popup .switch { justify-content: space-between; margin: 0 0 6px; }
+.popup p { margin: 8px 0; }
+
+/* Options */
+.options { max-width: 640px; margin: 0 auto; padding: 24px 20px 60px; }
+.options header { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+.options h1 { font-size: 20px; margin: 0; }
+.options h1 + p { margin: 2px 0 0; }
+.options section { border-top: 1px solid var(--line); padding: 14px 0 6px; }
+.options h2 { font-size: 15px; margin: 0 0 8px; }
+.viewer {
+  display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; margin: 6px 0;
+  border: 1px solid var(--line); border-radius: 8px; cursor: pointer;
+}
+.viewer input { margin-top: 3px; }
+.status { position: fixed; bottom: 16px; right: 20px; color: var(--accent); margin: 0; }
