@@ -1,5 +1,7 @@
 # Sidedoor for X Links
 
+[![Get the add-on for Firefox](https://img.shields.io/amo/v/sidedoor-for-x-links?label=Firefox%20Add-ons&logo=firefoxbrowser)](https://addons.mozilla.org/addon/sidedoor-for-x-links/)
+
 A Firefox extension that opens x.com and twitter.com links in a viewer of your choice, so you can read public posts without the login wall.
 
 - **Rewrites links on every page.** Hovering, copying and clicking an X link all use the viewer version. Links that load in later (infinite scroll, comments) are caught too.
@@ -11,7 +13,7 @@ A Firefox extension that opens x.com and twitter.com links in a viewer of your c
 
 ## Install
 
-- **From Mozilla Add-ons:** *(link coming once it's approved)*
+- **From Mozilla Add-ons:** [addons.mozilla.org/addon/sidedoor-for-x-links](https://addons.mozilla.org/addon/sidedoor-for-x-links/)
 - **For development:** open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on…**, and pick `manifest.json` from this folder.
 
 ## Adding a viewer

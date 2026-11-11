@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Sidedoor for X Links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Opens x.com and twitter.com links in a viewer of your choice, so you can read posts without the login wall.",
   "homepage_url": "https://github.com/outofjam/sidedoor",
   "icons": {
@@ -16,6 +16,9 @@
       "data_collection_permissions": {
         "required": ["none"]
       }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
     }
   },
   "permissions": [
