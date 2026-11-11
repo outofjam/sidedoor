@@ -24,3 +24,11 @@ $("settings").addEventListener("click", function (e) {
   browser.runtime.openOptionsPage();
   window.close();
 });
+
+document.querySelectorAll("a.ext").forEach(function (a) {
+  a.addEventListener("click", function (e) {
+    e.preventDefault();
+    browser.tabs.create({ url: a.href });
+    window.close();
+  });
+});

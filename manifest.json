@@ -1,8 +1,12 @@
 {
   "manifest_version": 2,
   "name": "Sidedoor for X Links",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Opens x.com and twitter.com links in a viewer of your choice, so you can read posts without the login wall.",
+  "developer": {
+    "name": "Out of Jam",
+    "url": "https://outofjam.com"
+  },
   "homepage_url": "https://github.com/outofjam/sidedoor",
   "icons": {
     "48": "icons/icon.svg",
@@ -14,7 +18,9 @@
       "id": "sidedoor@outofjam",
       "strict_min_version": "140.0",
       "data_collection_permissions": {
-        "required": ["none"]
+        "required": [
+          "none"
+        ]
       }
     },
     "gecko_android": {
@@ -33,12 +39,20 @@
     "*://*.twitter.com/*"
   ],
   "background": {
-    "scripts": ["common.js", "background.js"]
+    "scripts": [
+      "common.js",
+      "background.js"
+    ]
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["common.js", "content.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "common.js",
+        "content.js"
+      ],
       "run_at": "document_idle",
       "all_frames": true
     }

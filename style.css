@@ -1,10 +1,11 @@
 :root {
   --fg: #1f2328; --muted: #6b7280; --bg: #ffffff; --line: #e5e7eb;
-  --accent: #0f766e; --error: #b42318;
+  --accent: #0f766e; --error: #b42318; --on-accent: #ffffff;
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root { --fg: #e6e6e6; --muted: #9ca3af; --bg: #1c1b22; --line: #3a3944; --accent: #2dd4bf; --error: #f97066; }
+  :root { --on-accent: #042f2e; }
 }
 * { box-sizing: border-box; }
 body { font: 14px/1.45 system-ui, sans-serif; color: var(--fg); background: var(--bg); margin: 0; }
@@ -19,7 +20,7 @@ input[type=text], select {
 }
 button {
   font: inherit; padding: 6px 14px; border-radius: 6px; border: 1px solid var(--accent);
-  background: var(--accent); color: #fff; cursor: pointer;
+  background: var(--accent); color: var(--on-accent); cursor: pointer;
 }
 button.link { background: none; border: none; color: var(--muted); padding: 0; margin-left: auto; }
 button.link:hover { color: var(--error); }
@@ -46,3 +47,9 @@ input[type=checkbox], input[type=radio] { accent-color: var(--accent); }
 }
 .viewer input { margin-top: 3px; }
 .status { position: fixed; bottom: 16px; right: 20px; color: var(--accent); margin: 0; }
+
+.popup-links { display: flex; justify-content: space-between; margin-top: 4px; }
+.popup-credit { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 8px; }
+.options footer { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 8px; font-size: 13px; line-height: 1.8; }
+.options footer a { white-space: nowrap; }
+.options footer .sep { color: var(--muted); margin: 0 6px; }

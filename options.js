@@ -88,5 +88,7 @@ $("add").addEventListener("click", function () {
   });
 });
 
+$("version").textContent = "Version " + browser.runtime.getManifest().version;
+
 browser.storage.onChanged.addListener(load);
 load();
